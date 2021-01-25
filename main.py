@@ -69,7 +69,7 @@ def moth_data_convert(directory, file):
     ### SAVE RESULTS ###
     if not os.path.exists(os.path.join(directory, 'results')):
         os.mkdir(os.path.join(directory, 'results'))
-    outfile = os.path.join(directory, 'results', (file+ '-output'))
+    outfile = os.path.join(directory, 'results', (file.strip('.csv')+ '-output'))
 
     try:
         with open('{}.csv'.format(outfile), 'w') as final:
