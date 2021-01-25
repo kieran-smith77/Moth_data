@@ -44,7 +44,7 @@ def moth_data_convert(directory, file):
     ### LOAD IN REFERENCE DATA ###
     try:
         moths = []
-        with open(os.path.join(directory, "british_list.csv"), newline='') as csvfile:
+        with open("british_moths_list.csv", newline='') as csvfile:
             reader = csv.reader(csvfile)
             for i in reader:
                 moths.append(i)
@@ -87,5 +87,4 @@ directory = sys.argv[1]
 
 for file in os.listdir(directory):
     if file.endswith(".csv"):
-        if file != 'british_list.csv':
-            moth_data_convert(directory, file)
+        moth_data_convert(directory, file)
