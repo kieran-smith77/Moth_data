@@ -43,7 +43,7 @@ def moth_data_convert(directory, file):
     ### LOAD IN REFERENCE DATA ###
     try:
         moths = []
-        with open("british_list.csv", newline='') as csvfile:
+        with open("british_moths_list.csv", newline='') as csvfile:
             reader = csv.reader(csvfile)
             for i in reader:
                 moths.append(i)
